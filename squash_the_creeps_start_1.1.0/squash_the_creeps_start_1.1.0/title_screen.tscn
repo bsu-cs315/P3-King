@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfq0kuar7neia"]
+
+[ext_resource type="Script" path="res://TitleScreen.gd" id="1_skfd8"]
+[ext_resource type="FontFile" uid="uid://chtnip1k1uct8" path="res://fonts/Montserrat-Medium.ttf" id="2_b8ily"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_skfd8")
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.5
+offset_top = 68.0
+offset_right = 50.5
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -242.5
+offset_top = -57.5
+offset_right = 242.5
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.00784314, 0.00784314, 0.00784314, 1)
+theme_override_fonts/font = ExtResource("2_b8ily")
+theme_override_font_sizes/font_size = 50
+text = "Squash The Creeps"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
